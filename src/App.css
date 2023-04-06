@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+  /* Navbar style */
+
+  .navbar-container {
+    height: 5rem;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+  }
+
+  .navbar-name {
+    color: white;
+  }
+
+
+  /* HeroSlide section style */
+
+  .heroslide-background-img {
+    background-image: url(./images/MatrixRe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hero-header-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.5rem;
+    line-height: 13rem;
+    text-align: center;
+
+    color: #ffffff;
+
+    text-shadow: -8px 7px 4px #000000;
+  }
+
+  .hero-header2-text {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.5rem;
+    line-height: 13rem;
+    text-align: center;
+
+    color: #ffffff;
+
+    text-shadow: -8px 7px 4px #000000;
+
+  }
+
+  /* Series from API */
+
+  .serie-name-container {
+    background-color: #000000;
+    padding: 2rem 0rem;
+
+  }
+
+  .serie-name {
+    color: white;
+    margin-left: 2rem;
+    margin-bottom: 0rem;
+  }
+
+  .serie-container{
+    display: flex;
+    overflow: scroll;
+    background-color: #000000;
+}
+
+.card-container {
+    margin: 0.5rem;
+    background-color: rgb(204, 191, 191);
+    border-radius: 10px;
+}
+
+.card-container:hover {
+    transform: scale(1.1);
+  }
+
+  .serielistname-container {
+    background-color: #000000;
+  }
+
+  .serielistname-container > h1 {
+    margin: 0;
+    color: #ffffff;
+    padding-left: 2rem;
+  }
