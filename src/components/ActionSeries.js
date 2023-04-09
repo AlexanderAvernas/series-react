@@ -6,7 +6,7 @@ const ComedySeries = (props) => {
 
   return (
     <div>
-      <ApiArray setSelectedTvShow={setSelectedTvShow} genre="Comedy" serieListName="Comedy Series" />
+      <ApiArray setSelectedTvShow={setSelectedTvShow} genre="Action" serieListName="Action Series" />
       {selectedTvShow && (
         <div>
         </div>

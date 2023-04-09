@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const TVMaze = () => {
-  const [tvShow, setTvShow] = useState(null);
-  const [query, setQuery] = useState("gir");
+  const [tvShow, setTvShow] = useState([]);
+  const [query, setQuery] = useState("");
 
   const handleSubmit = (evt) => {
     evt.preventDefault();

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const TVMaze = (props) => {
-  const { setSelectedTvShow, genre } = props;
+  const { setSelectedTvShow, genre, serieListName } = props;
   const [tvShows, setTvShows] = useState([]);
 
   useEffect(() => {
@@ -14,11 +14,13 @@ const TVMaze = (props) => {
       });
   }, [genre]);
 
+
   if (!tvShows) return <div>Loading...</div>;
+  console.log(tvShows);
 
   return (
     <div className="serie-name-container">
-      <h1 className="serie-name">TV Show</h1>
+      <h1 className="serie-name">{props.serieListName}</h1>
       <div className="serie-container">
         {tvShows.map((tvShow) => (
           <div
