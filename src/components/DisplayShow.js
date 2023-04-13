@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 const SelectedTvShow = (props) => {
     const { selectedTvShow } = props
+
+
     return (
         <div>
             <Wrap>
                 {/* <ApiArray tvShow={selectedTvShow} /> */}
+                <CloseButton  >X</CloseButton>
                 <ImageContainer>
                     {selectedTvShow.image ? (
                         <img
@@ -33,6 +37,22 @@ export default SelectedTvShow
 const Wrap = styled.div`
     background-color: black;
     display: flex;
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    z-index: 100000;
+    top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+`
+
+const CloseButton = styled.button`
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
 `
 
 const ImageContainer = styled.div`

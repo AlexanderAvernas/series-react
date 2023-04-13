@@ -5,6 +5,7 @@ const TVMaze = (props) => {
   const { setSelectedTvShow, genre, serieListName } = props;
   const [tvShows, setTvShows] = useState([]);
 
+
   useEffect(() => {
     axios
       .get(`http://api.tvmaze.com/shows`)
@@ -16,7 +17,6 @@ const TVMaze = (props) => {
 
 
   if (!tvShows) return <div>Loading...</div>;
-  console.log(tvShows);
 
   return (
     <div className="serie-name-container">

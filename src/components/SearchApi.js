@@ -3,7 +3,7 @@ import axios from "axios";
 
 const TVMaze = () => {
   const [tvShow, setTvShow] = useState([]);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("Arrow");
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
