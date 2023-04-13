@@ -21,6 +21,10 @@ const TVMaze = () => {
 
   return (
     <div>
+
+        <h1>Serach yoyr serie</h1>
+
+
       <form onSubmit={handleSubmit}>
         <input type="text" name="query" value={query} onChange={(evt) => setQuery(evt.target.value)} />
         <button>Search</button>

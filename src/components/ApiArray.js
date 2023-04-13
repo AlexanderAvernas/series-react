@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const TVMaze = (props) => {
-  const { setSelectedTvShow, genre, serieListName } = props;
+  const { setSelectedTvShow, genre, closeSetSelectedTvShow } = props;
   const [tvShows, setTvShows] = useState([]);
+
+
 
 
   useEffect(() => {
@@ -14,6 +16,7 @@ const TVMaze = (props) => {
         setTvShows(filteredShows);
       });
   }, [genre]);
+
 
 
   if (!tvShows) return <div>Loading...</div>;
@@ -27,6 +30,7 @@ const TVMaze = (props) => {
             className="card-container"
             key={tvShow.id}
             onClick={() => setSelectedTvShow(tvShow)}
+            onClose={() => closeSetSelectedTvShow(tvShow === null)}
           >
             {tvShow.image ? (
               <img src={tvShow.image.medium} alt={tvShow.name} />

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ApiArray from '../components/ApiArray'
 // import Apinfo from './components/Apinfo'
-import SearchApi from '../components/SearchApi'
 import HeroSlide from '../components/HeroSlide'
 import DisplayShow from '../components/DisplayShow'
 import ComedySeries from '../components/ComedySeries'
@@ -21,8 +20,7 @@ function Home() {
           <DramaSeries selectedTvShow={selectedTvShow} setSelectedTvShow={setSelectedTvShow} serieListName='Drama Series'/>
           <FamilySeries selectedTvShow={selectedTvShow} setSelectedTvShow={setSelectedTvShow} serieListName='Family Series'/>
           <ActionSeries selectedTvShow={selectedTvShow} setSelectedTvShow={setSelectedTvShow} serieListName='Action Series'/>
-          <SearchApi/>
-          {selectedTvShow ? <DisplayShow selectedTvShow={selectedTvShow}/> : null}
+          {selectedTvShow ? <DisplayShow selectedTvShow={selectedTvShow} closeSetSelectedTvShow={() => setSelectedTvShow(null)} /> : null}
 
       </div>
     );
