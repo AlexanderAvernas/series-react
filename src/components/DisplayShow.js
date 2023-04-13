@@ -2,7 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 const SelectedTvShow = (props) => {
-    const { selectedTvShow } = props
+    const { selectedTvShow, onSaveButtonClick } = props
+
+    const handleSaveButtonClick = () => {
+        onSaveButtonClick(selectedTvShow);
+      };
 
     return (
         <div>
@@ -21,6 +25,9 @@ const SelectedTvShow = (props) => {
                         ) : null}
                         <p>Rating: {selectedTvShow.rating.average}</p>
                     </ImageContainer>
+                    <button onClick={handleSaveButtonClick}>
+            Save to My Shows
+          </button>
                     <InfoContainer>
                         <HeaderText>{selectedTvShow.name}</HeaderText>
                         <InfoText>{selectedTvShow.summary}</InfoText>
