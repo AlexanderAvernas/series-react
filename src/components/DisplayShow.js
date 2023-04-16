@@ -23,14 +23,15 @@ const SelectedTvShow = (props) => {
                                 alt={selectedTvShow.name}
                             />
                         ) : null}
-                        <p>Rating: {selectedTvShow.rating.average}</p>
+                        <Rating>Rating: {selectedTvShow.rating.average}</Rating>
                     </ImageContainer>
-                    <button onClick={handleSaveButtonClick}>
-            Save to My Shows
-          </button>
+
                     <InfoContainer>
                         <HeaderText>{selectedTvShow.name}</HeaderText>
                         <InfoText>{selectedTvShow.summary}</InfoText>
+                        <SaveButton onClick={handleSaveButtonClick}>
+            Must see!
+          </SaveButton>
                     </InfoContainer>
                     {/* <h1>{selectedTvShow.language}</h1>
       <h1>{selectedTvShow.genres}</h1>
@@ -54,6 +55,12 @@ const WrapContainer = styled.div `
     left: 0;
     right: 0;
     bottom: 0;
+
+    @media screen and (max-width: 690px) {
+        background-color: black;
+        overflow: scroll;
+
+    }
 `
 
 const Wrap = styled.div`
@@ -61,19 +68,33 @@ const Wrap = styled.div`
     display: flex;
     position: fixed;
     width: 100%;
-    height: 40%;
+    height: 50%;
     z-index: 100000;
     top: 30%;
     left: 0;
     right: 0;
     bottom: 0;
+
+    @media screen and (max-width: 690px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        top: 0;
+
+
+    }
 `
 
 const CloseButton = styled.button`
     position: absolute;
     top: 3%;
     right: 3%;
-    padding: 0.5rem 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-weight: 900;
 `
 
 const ImageContainer = styled.div`
@@ -91,6 +112,15 @@ const InfoContainer = styled.div`
     background-color: black;
     width: 70vw;
     margin-top: 2rem;
+
+    @media screen and (max-width: 690px) {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
 `
 const HeaderText = styled.h1`
     color: white;
@@ -99,4 +129,26 @@ const HeaderText = styled.h1`
 const InfoText = styled.p`
     color: white;
     margin-right: 11rem;
+
+
+    @media screen and (max-width: 690px) {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+`
+
+const SaveButton = styled.button `
+height: 4rem;
+width: 10rem;
+border-radius: 50%;
+font-size: larger;
+font-weight: 600;
+
+&:hover {
+        transform: scale(1.3);
+    }
+`
+
+const Rating = styled.p`
+color: white;
 `

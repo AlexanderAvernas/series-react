@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import ApiArray from '../components/ApiArray'
-// import Apinfo from './components/Apinfo'
 import HeroSlide from '../components/HeroSlide'
 import DisplayShow from '../components/DisplayShow'
-import ComedySeries from '../components/ComedySeries'
+import ComedySeries from '../components/ComedySeries.tsx'
 import DramaSeries from '../components/DramaSeries'
 import FamilySeries from '../components/FamilySeries'
 import ActionSeries from '../components/ActionSeries'
 import SavedTvShows from '../components/SavedTvShows'
+// import SearchApi from '../components/SearchApi'
 
 function Home() {
     const [selectedTvShow, setSelectedTvShow] = useState(null)
@@ -24,7 +24,6 @@ function Home() {
                 setSelectedTvShow={setSelectedTvShow}
                 serieListName="All"
             />
-            {/* <Apinfo/> */}
             <ComedySeries
                 selectedTvShow={selectedTvShow}
                 setSelectedTvShow={setSelectedTvShow}
@@ -52,7 +51,16 @@ function Home() {
                     onSaveButtonClick={handleSaveTvShow}
                 />
             ) : null}
-            <SavedTvShows savedTvShows={savedTvShows} />
+            <SavedTvShows
+                className="SavedTvShow-container"
+                savedTvShows={savedTvShows}
+                setSavedTvShows={setSavedTvShows}
+            />
+            {/* <SearchApi
+                selectedTvShow={selectedTvShow}
+                onSaveButtonClick={handleSaveTvShow}
+                setSelectedTvShow={setSelectedTvShow}
+            /> */}
         </div>
     )
 }

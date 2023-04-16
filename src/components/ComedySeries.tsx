@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import ApiArray from "./ApiArray";
 
-const ComedySeries = (props) => {
+interface ComedyProps  {
+    genre: string,
+    serieListName: string,
+    selectedTvShow: object,
+    setSelectedTvShow: object
+
+ }
+
+const ComedySeries = (props: ComedyProps) => {
   const {selectedTvShow, setSelectedTvShow} = props;
 
   return (

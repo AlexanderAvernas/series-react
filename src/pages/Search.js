@@ -1,13 +1,18 @@
-import React from 'react'
-import SearchApi from '../components/SearchApi'
+// import React, {useContext} from 'react'
+// import SearchApi from '../components/SearchApi'
+// import { UserContext } from '../UserContext/UserContext'
 
 
-function Search() {
-  return (
-    <div>
-         <SearchApi/>
-    </div>
-  )
-}
+// function Search() {
 
-export default Search
+//     const msg = useContext(UserContext)
+//   return (
+//     <div>
+
+//          <SearchApi/>
+//          <h1>{msg}</h1>
+//     </div>
+//   )
+// }
+
+// export default Search

@@ -8,39 +8,52 @@
 
   /* Navbar style */
 
+  .navbar {
+    margin-top: -20px;
+  }
+
   .navbar-container {
     height: 5rem;
     background-color: transparent;
-    position: fixed;
+    position: absolute;
     z-index: 1000;
-    top: 0;
+    top: 2rem;
+    left: 0rem;
   }
 
   .navbar-name {
     color: white;
+    font-size: xxx-large;
+  }
+
+  .navbar-link {
+    color: white;
+    font-size: medium;
+    font-weight: 900;
+    text-decoration: none;
   }
 
 
   /* HeroSlide section style */
 
   .heroslide-background-img {
-    background-image: url(./images/MatrixRe.jpg);
+    background-image: url(./images/sunset2.jpg);
+    filter: grayscale(-1);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
     height: 100vh;
   }
 
   .hero-header-text {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     transform: translate(-50%, -50%);
 
     font-style: normal;
     font-weight: 400;
     font-size: 4.5rem;
-    line-height: 13rem;
+    line-height: 4rem;
     text-align: center;
 
     color: #ffffff;
@@ -51,13 +64,14 @@
   .hero-header2-text {
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 4rem;
 
     font-style: normal;
     font-weight: 400;
     font-size: 4.5rem;
-    line-height: 13rem;
+    line-height: 4rem;
     text-align: center;
 
     color: #ffffff;
@@ -104,4 +118,62 @@
     margin: 0;
     color: #ffffff;
     padding-left: 2rem;
+  }
+
+  /* SavedTvShow right side position */
+
+  .SavedTvShow-container{
+    position: relative;
+    right: 100%;
+    background-color: aqua;
+    height: 400px;
+  }
+
+
+  /* Media query */
+
+
+
+  @media screen and (max-width: 690px) {
+    .hero-header-text {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        line-height: 2.5rem;
+        transform: translate(-50%, -50%);
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3rem;
+        text-align: center;
+
+        color: #ffffff;
+
+        text-shadow: -8px 7px 4px #000000;
+
+    }
+
+    .hero-header2-text {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        line-height: 2.5rem;
+        transform: translate(-50%, -50%);
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.5rem;
+        text-align: center;
+
+        color: #ffffff;
+
+        text-shadow: -8px 7px 4px #000000;
+    }
+  }
+
+  /* About */
+
+  .about-container {
+    background-color: black;
+    height: 100vh;
   }
