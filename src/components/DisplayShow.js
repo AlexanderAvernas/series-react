@@ -68,9 +68,9 @@ const Wrap = styled.div`
     display: flex;
     position: fixed;
     width: 100%;
-    height: 50%;
+    height: 65%;
     z-index: 100000;
-    top: 30%;
+    top: 20%;
     left: 0;
     right: 0;
     bottom: 0;

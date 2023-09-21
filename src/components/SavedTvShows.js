@@ -96,7 +96,7 @@ const Button = styled.button`
     }
 
     @media screen and (max-width: 690px) {
-        top: 90vh;
+        top: 89vh;
     }
 `
 
