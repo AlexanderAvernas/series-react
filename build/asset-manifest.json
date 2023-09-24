@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/series-react/static/css/main.acc1f738.css",
+    "main.js": "/series-react/static/js/main.e4788418.js",
+    "static/media/sunset2.jpg": "/series-react/static/media/sunset2.7e9bd0573055b9bbec39.jpg",
+    "index.html": "/series-react/index.html",
+    "main.acc1f738.css.map": "/series-react/static/css/main.acc1f738.css.map",
+    "main.e4788418.js.map": "/series-react/static/js/main.e4788418.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.acc1f738.css",
+    "static/js/main.e4788418.js"
+  ]
+}
