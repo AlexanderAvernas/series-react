@@ -5,7 +5,6 @@ import Navbar from 'react-bootstrap/Navbar'
 import { Routes, Route, Link } from 'react-router-dom'
 import Home from '../pages/Home'
 import About from '../pages/About'
-import Search from '../pages/Search'
 
 
 
