@@ -10,7 +10,7 @@ const TVMaze = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://api.tvmaze.com/shows`)
+      .get(`https://api.tvmaze.com/shows`)
       .then((response) => {
         const filteredShows = genre ? response.data.filter(show => show.genres.includes(genre)) : response.data;
         setTvShows(filteredShows);
